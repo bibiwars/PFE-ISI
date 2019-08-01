@@ -1,0 +1,92 @@
+\documentclass[pfe ,titlesmallcaps]{isipfe}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\graphicspath{{./Figures/}}
+\usepackage{hyperref}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{float}
+\usepackage{acronym}
+\usepackage{textcomp}
+\usepackage[british,UKenglish,USenglish]{babel}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{ltxtable}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{arabtex}
+\usepackage{pdfpages}
+\usepackage{utf8}
+\usepackage{tcolorbox}
+%fixing space in list of figures
+\usepackage[titles]{tocloft}
+\cftsetindents{figure}{0em}{3em}
+\cftsetindents{table}{0em}{3em}
+
+
+\usepackage{titleps}% http://ctan.org/pkg/titleps
+
+\newcounter{para}
+\newcommand\mypara[1]{\par\refstepcounter{para}\textbf{\thepara\space}}
+\begin{document}  
+
+\frontmatter
+
+\title{Titre du projet}
+\author{Prénom NOM}
+
+\input{page_garde}
+\input{dedicaces}
+\input{remerciement}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+
+\listoffigures
+\listoftables
+\input{acronymes}
+
+\mainmatter
+%%%%% Introduction
+
+\input{chap_intro}
+
+%%%%% Chapter one
+\input{chap_01}
+
+%%%%% Chapter two
+\input{chap_02}
+
+%%%%% Chapter three
+\input{chap_03}
+
+%%%%% Chapter four
+\input{chap_04}
+
+%%%%% Chapter five
+%\input{chap_05}
+
+%%%%% To add new chapter, you should first add a chap_xx.tex file to the folder and add the following line
+
+%%%%% Conclusion
+\input{chap_conclusion}
+
+%\appendix
+%%%%% annex
+%\input{chap_annex}
+%\input{chap_annex2}
+
+
+\backmatter
+
+
+%%%%% Bibliography, in BibTeX format (the references.bib file)
+\renewcommand\bibname{References}
+\bibliography{references}
+\input{resume}
+\end{document}
